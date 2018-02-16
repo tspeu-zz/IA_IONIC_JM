@@ -41,3 +41,17 @@ y a las cuales puede reaccionar la api.
  se coloca una url y API.AI hace un post hacia esa URL con la info extraida de ese intent-> es decir en el ejemplo la edad->
  en base a esos parametros se puede crear una logica en el servidor-> ademas esto se debe ir al intent especifico y activar FULLFILLMENT-->
  
+  #cordova plugin add cordova-plugin-apiai
+  
+
+  iniciaclizar el plug- pero e¡l objeto global en el contexto de js
+  no se indentifica.->
+  proque no hay un objto
+
+  hay que declarar un objeto global con
+  decalre var-->
+  window es el on¡bjeto globla el root de todo js app
+  -->
+
+  asi se le pasa con el index, ya es lo enciantra en el arbol de objetos 
+  desde obj->
