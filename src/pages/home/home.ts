@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , NgZone} from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 // declarar el objeto global 
@@ -10,27 +10,43 @@ declare var window;
 })
 export class HomePage {
 
-    messages : any[] = [] ;
-  constructor(public navCtrl: NavController) {
+  messages : any[] = [] ;
+  text : string = "";
+
+  constructor(public navCtrl: NavController, public ngZone : NgZone) {
 
     this.messages.push({
       text: "Hi, how can I help you?",
       sender: "api"
     })
 
-    this.messages.push({
-      text: "Hello",
-      sender: "me"
-    })
+   
   }
 
   sendText(){
+
+    let message = this.text;
+
+    this.messages.push({
+      text:  message,
+      sender: "me"
+    })
+
+    this.text ="";
+
   // se envia el texto con el objeto del plugIn ->
   window["ApiAIPlugin"].requestText({
-    query: "Hola"
+    query: message
     }, (response)=>{
 
-      alert(JSON.stringify(response));
+      this.ngZone.run(() =>{
+         // alert(JSON.stringify(response));
+        this.messages.push({
+          text: response.result.fulfillment.speech,
+          sender: "api"
+        });
+      })
+
     }, (error)=> {
 
       alert(JSON.stringify(error));
