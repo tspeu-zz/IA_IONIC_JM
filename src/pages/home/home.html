@@ -15,6 +15,30 @@
     </button>
   </ion-fab>
 
+<!-- lista mensajes -->
+    <ion-list  no-lines class="chat-list">
+        <ion-item *ngFor ="let message of messages" class="chat-item">
+          <!--   -->
+          <!-- res from api.ai   -->
+          <ion-avatar item-left *ngIf="message.sender == 'api'">
+            <img src="assets/imgs/bot2.png">
+          </ion-avatar>
+        <!-- input user  -->
+            <ion-avatar item-right *ngIf="message.sender == 'me'">
+              <img src="assets/imgs/me.png">
+            </ion-avatar>
+            
+  <!-- res from api.ai   -->          
+            <div *ngIf="message.sender == 'api'" class="bubble me">
+              <h3> {{message.test}}</h3>
+            </div>
+ <!-- input user  -->
+            <div *ngIf="message.sender == 'api'" class="bubble you">
+                <h3>{{message.test}}</h3>
+            </div>
+
+          </ion-item>
+    </ion-list>
 </ion-content>
 
 
