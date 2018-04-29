@@ -55,3 +55,6 @@ y a las cuales puede reaccionar la api.
 
   asi se le pasa con el index, ya es lo enciantra en el arbol de objetos 
   desde obj->
+
+  @ionic-native/text-to-speech@4.7.0
+  ionic cordova plugin add cordova-plugin-tts --save

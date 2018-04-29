@@ -1,0 +1,35 @@
+{
+  "id": "f09bbaaf-e35c-4773-936e-fd17ff22a518",
+  "timestamp": "2018-02-20T19:43:17.817Z",
+  "lang": "en",
+  "result": {
+    "source": "agent",
+    "resolvedQuery": "hola",
+    "action": "input.welcome",
+    "actionIncomplete": false,
+    "parameters": {},
+    "contexts": [],
+    "metadata": {
+      "intentId": "63e16f92-fea9-4fc1-b0a6-73738292e3df",
+      "webhookUsed": "false",
+      "webhookForSlotFillingUsed": "false",
+      "intentName": "Welcome"
+    },
+    "fulfillment": {
+      "speech": "Que tal Bro!",
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Hola tu!"
+        }
+      ]
+    },
+    "score": 1
+  },
+  "status": {
+    "code": 200,
+    "errorType": "success",
+    "webhookTimedOut": false
+  },
+  "sessionId": "c315d5b5-c721-4e72-a4ed-d54db1e8a232"
+}

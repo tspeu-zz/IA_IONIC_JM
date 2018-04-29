@@ -23,6 +23,7 @@ page-home {
         padding: 10px 18px;
         position: relative;
         vertical-align: middle;
+        color: #222;
     }
 
     .bubble::before {
@@ -47,16 +48,19 @@ page-home {
 
     .me::before {
         box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
-        left: -9px;           
+        left: -9px;   
+        color: #222;        
     }
 
     .you {
         float: right;    
-        margin: 5px 20px 5px 45px;         
+        margin: 5px 20px 5px 45px;
+        color: #222;         
     }
 
     .you::before {
         box-shadow: 2px -2px 2px 0 rgba( 178, 178, 178, .4 );
         right: -9px;    
+        color: #222;
     }
 }
